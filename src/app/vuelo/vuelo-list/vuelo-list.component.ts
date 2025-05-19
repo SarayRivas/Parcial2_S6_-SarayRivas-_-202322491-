@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { VueloDetail } from '../vuelo-detail/vuelo-detail.component';
 import { Vuelo } from '../vuelo';
 import { VueloService } from '../vuelo.service';
-import {VueloDetail} from '../vuelo-detail';
 
 @Component({
   selector: 'app-vuelo-list',
@@ -12,7 +12,7 @@ import {VueloDetail} from '../vuelo-detail';
 export class VueloListComponent implements OnInit {
   Vuelo: Array<Vuelo> = [];
   selected: Boolean = false;
-  selectedTeatro!: VueloDetail
+  selectedVuelo!: VueloDetail
   nombreVuelo: string = '';
 
   constructor( private vueloService: VueloService) { }
